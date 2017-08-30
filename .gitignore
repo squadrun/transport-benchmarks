@@ -1,0 +1,26 @@
+*.py[cod]
+*.log
+*.pot
+
+# Unit test / coverage reports
+.coverage
+.tox
+
+# Translations
+*.mo
+
+# Developer
+.pydevproject
+.project
+.settings/
+.idea/
+.DS_Store
+*~
+*-local.scss
+
+# locals
+static-tmp
+media
+*.sqlite3
+.env
+local.py
