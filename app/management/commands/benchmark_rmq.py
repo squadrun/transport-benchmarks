@@ -20,5 +20,6 @@ class Command(BaseCommand):
 
         for i in xrange(num_msgs):
             adder.delay(i, i)
+            print i
 
         logger.info('{} messages sent'.format(num_msgs))
