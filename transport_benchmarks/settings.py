@@ -123,3 +123,8 @@ STATIC_URL = '/static/'
 broker_transport_options = {
     'confirm_publish': True  # because other transports confirm publishing too
 }
+
+# PUBSUB
+batch_settings_options = {
+    "max_messages": 1  # because other transports won't send in batches
+}
