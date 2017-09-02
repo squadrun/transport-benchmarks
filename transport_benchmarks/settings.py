@@ -120,7 +120,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # CELERY
-broker_transport_options = {
+BROKER_TRANSPORT_OPTIONS = {
     'confirm_publish': True  # because other transports confirm publishing too
 }
 
@@ -128,3 +128,10 @@ broker_transport_options = {
 batch_settings_options = {
     "max_messages": 1  # because other transports won't send in batches
 }
+
+# SQS
+sqs_broker_transport_options = {
+    'region': 'ap-southeast-1'
+}
+
+BROKER_TRANSPORT_OPTIONS.update(sqs_broker_transport_options)

@@ -1,10 +1,9 @@
 import os
 from celery import Celery
 
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'transport_benchmarks.local_settings')
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'squadrun.local_settings')
-
-app = Celery('squadrun')
+app = Celery('transport_benchmarks')
 app.config_from_object('django.conf:settings')
 
 
