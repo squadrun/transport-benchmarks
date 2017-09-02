@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'django_rmq_vs_sqs.urls'
+ROOT_URLCONF = 'transport_benchmarks.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_rmq_vs_sqs.wsgi.application'
+WSGI_APPLICATION = 'transport_benchmarks.wsgi.application'
 
 
 # Database
@@ -118,3 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# CELERY
+broker_transport_options = {
+    'confirm_publish': True  # because other transports confirm publishing too
+}
