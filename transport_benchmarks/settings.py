@@ -123,6 +123,9 @@ STATIC_URL = '/static/'
 BROKER_TRANSPORT_OPTIONS = {
     'confirm_publish': True  # because other transports confirm publishing too
 }
+CELERYD_PREFETCH_MULTIPLIER = 128
+worker_prefetch_multiplier = 128
+WORKER_PREFETCH_MULTIPLIER = 128
 
 # PUBSUB
 batch_settings_options = {
