@@ -126,6 +126,8 @@ BROKER_TRANSPORT_OPTIONS = {
 CELERYD_PREFETCH_MULTIPLIER = 512
 worker_prefetch_multiplier = 512
 WORKER_PREFETCH_MULTIPLIER = 512
+task_acks_late = True
+CELERY_TASK_ACKS_LATE = True
 
 # PUBSUB
 batch_settings_options = {
